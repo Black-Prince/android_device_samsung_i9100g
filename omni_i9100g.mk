@@ -1,4 +1,4 @@
-#
+# Copyright (C) 2013 OmniROM Project
 # Copyright (C) 2012 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,21 +14,21 @@
 # limitations under the License.
 #
 
-## Specify phone tech before including full_phone
-$(call inherit-product, vendor/cm/config/gsm.mk)
+# Get the long list of APNs
+PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
 
 # Release name
 PRODUCT_RELEASE_NAME := GT-I9100G
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/i9100g/full_i9100g.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := i9100g
-PRODUCT_NAME := cm_i9100g
+PRODUCT_NAME := omni_i9100g
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := GT-I9100G
 PRODUCT_MANUFACTURER := samsung

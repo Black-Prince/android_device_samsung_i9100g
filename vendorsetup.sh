@@ -1,5 +1,5 @@
-# Copyright (C) 2013 OmniROM Project
-# Copyright (C) 2012 The CyanogenMod Project
+#
+# Copyright 2013 Black-Prince - OmniRom
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,13 +14,6 @@
 # limitations under the License.
 #
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, device/samsung/i9100g/device.mk)
+add_lunch_combo full_i9100g-userdebug
+add_lunch_combo omni_i9100g-userdebug
 
-# Discard inherited values and use our own instead.
-PRODUCT_NAME := full_i9100g
-PRODUCT_DEVICE := i9100g
-PRODUCT_BRAND := samsung
-PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := GT-I9100G

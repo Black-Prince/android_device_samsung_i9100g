@@ -1,4 +1,4 @@
-#
+# Copyright (C) 2013 OmniROM Project
 # Copyright (C) 2012 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -64,7 +64,7 @@ PRODUCT_PACKAGES += \
     lights.t1 \
     power.t1 \
     SamsungServiceMode \
-    Torch
+    OmniTorch
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \

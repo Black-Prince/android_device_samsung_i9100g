@@ -1,4 +1,4 @@
-#
+# Copyright (C) 2013 OmniROM Project
 # Copyright (C) 2012 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -116,8 +116,8 @@ BOARD_UMS_LUNFILE := "/sys/class/android_usb/f_mass_storage/lun0/file"
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
-TARGET_RECOVERY_FSTAB := device/samsung/i9100g/rootdir/fstab.t1
-RECOVERY_FSTAB_VERSION := 2
+TARGET_RECOVERY_FSTAB := device/samsung/i9100g/rootdir/recovery.fstab
+RECOVERY_FSTAB_VERSION := 1
 
 # assert
 TARGET_OTA_ASSERT_DEVICE := i9100g,GT-I9100G
@@ -131,3 +131,7 @@ TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := ./device/samsung/i9100g/releasetool
 
 # Use the non-open-source parts, if they're present
 -include vendor/samsung/i9100g/BoardConfigVendor.mk
+
+# TWRP
+HAVE_SELINUX := true
+DEVICE_RESOLUTION := 480x800
