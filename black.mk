@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2012 The CyanogenMod Project
+# Copyright (C) 2013 The BlackSRom Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,15 +18,16 @@
 # Release name
 PRODUCT_RELEASE_NAME := GT-I9100G
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
-
 # Inherit device configuration
 $(call inherit-product, device/samsung/i9100g/full_i9100g.mk)
 
+# Inherit blacks stuff
+$(call inherit-product, vendor/black/config/common.mk)
+$(call inherit-product, vendor/black/config/gsm.mk)
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := i9100g
-PRODUCT_NAME := cm_i9100g
+PRODUCT_NAME := black_i9100g
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := GT-I9100G
 PRODUCT_MANUFACTURER := samsung
